@@ -1,0 +1,217 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-container {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    background-image: linear-gradient(to left, #28a745, #1e7e34);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px; 
+}
+
+.header-top-inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-top img, .header-bottom img {
+    width: 30px;
+    height: 26px;
+    margin-right: 10px;
+}
+.header-top img:hover,
+.header-bottom img:hover {
+    background-color: #e0e0e0; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    padding: 2px; 
+}
+
+.header-top .table-name {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.header-bottom {
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px 20px; 
+}
+.header-bottom select,
+.header-bottom input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.header-bottom .vertical-line {
+    height: 30px;
+    width: 2px;
+    background-color: #b9b9b9;
+    margin: 0 10px;
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+#myTable th, #myTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#myTable th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+#myTable td:hover, #myTable th:hover { 
+    background-color: #63a051;
+}
+#myTable input[type="text"] {
+    width: 100%; 
+    border: none;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+#myTable input[type="text"]:focus {
+    outline: none;
+}
+
+.active-cell {
+    background-color: #c6f68b;
+}
+
+/* Modal Window */
+.modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+    height: auto;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 80%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+#myModal {
+    position: fixed;
+    background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 300px;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-width: 80%;
+    z-index: 1000;
+    cursor: move;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+#myModal, .modal-content {
+    font-family: 'Open Sans', sans-serif; 
+    color: #333;
+}
+
+#myModal textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#myModal div {
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
+
+#myModal button {
+    background-color: #41ad46; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.95em;
+    transition: 0.25s ease;
+}
+/* ADD ROW & COLUMN */
+
+.clickable-image {
+    width: 25px;
+    margin-left: 4px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.clickable-image:hover {
+    width: 24px;
+    margin-left: 5px;
+    margin-top: 5px;
+    transition: 0.25s ease;
+}
+
+.addColumnBtn {
+    width: 25px;
+    margin-left: 4px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.addColumnBtn:hover {
+    width: 24px;
+    margin-left: 5px;
+    margin-top: 5px;
+    transition: 0.25s ease;
+}
